@@ -11,12 +11,12 @@ retention_days = 7  # Number of days to keep backups
 email_notifications = True  # Set to False to disable email notifications
 
 # Email configuration (if email_notifications is enabled)
-email_recipient = "mohamed.ahsan.official@gmail.com"
-email_sender = "00mohamed00ashan00@gamil.com"
+email_recipient = "example_recipient@gmail.com"
+email_sender = "example_sender@gmail.com"
 smtp_server = "smtp.gmail.com"
 smtp_port = 587
-smtp_user = "00mohamed00ahsan00@gmail.com"
-smtp_pass = "rwvs gtsi cluj ttuw"
+smtp_user = "your_email@gmail.com"
+smtp_pass = "your_email_password"
 
 # Create a unique backup name with date and time
 date = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
