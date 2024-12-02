@@ -1,53 +1,89 @@
 # Automated Backup Script
 
-## Description
+## Overview
 
-This project is a Python script designed to automate the backup process of important files. It creates a zip archive of specified directories, retains recent backups based on a set retention period, and sends email notifications upon successful or failed backups. The script is ideal for ensuring data safety by maintaining automated backups.
-
----
-
-## Key Features:
-- **Automated Backups:** Compresses and saves files from a designated source directory into a timestamped zip archive.
-- **Retention Management:** Automatically deletes old backups beyond a specified retention period.
-- **Email Notifications:** Sends alerts for both successful and failed backup operations.
+This Python script automates the backup of important files by creating a compressed archive, managing backup retention, and sending email notifications about the backup status. It ensures data safety with automated processes for backup creation and cleanup.
 
 ---
 
-## Configuration:
-- Customize paths for source and backup directories.
-- Set retention days to manage backup cleanup.
-- Configure email settings to receive notifications.
+## Features
+
+- **Automated Backup Creation:** Compresses files from a specified source directory into a timestamped ZIP archive.
+- **Retention Management:** Deletes old backups beyond a configurable retention period.
+- **Email Notifications:** Sends an email notification upon successful or failed backup attempts.
 
 ---
 
-## Setup Instructions:
-1. Clone the repository.
-2. Update the configuration section in the script with your details (paths, email credentials, etc.).
-3. Run the script using Python 3.x.
+## Requirements
+
+- Python 3.x
+- Required modules:
+  - `os`
+  - `datetime`
+  - `zipfile`
+  - `smtplib`
+  - `email.mime.text`
 
 ---
 
-## Contributors:
-- **Mohamed Ahsan Wakir**  
-- **Abdullah Maqbool**
+## Configuration
 
+Customize the following variables in the script according to your needs:
 
-  
+### Directories:
+- `source_dir`: Path to the directory containing files to be backed up.
+- `backup_dir`: Path to store the backup archives.
+
+### Backup Retention:
+- `retention_days`: Number of days to keep old backups.
+
+### Email Settings:
+- `email_notifications`: Set to `True` to enable email notifications.
+- `email_recipient`: Email address to receive notifications.
+- `email_sender`: Sender's email address.
+- `smtp_server`: SMTP server address (default: `smtp.gmail.com`).
+- `smtp_port`: Port for the SMTP server (default: `587`).
+- `smtp_user`: SMTP user email.
+- `smtp_pass`: SMTP user password (ensure this is secure).
+
 ---
 
-## Keywords:
-- Python
-- Backup Automation
-- Email Notifications
-- Data Management
-- Cybersecurity Tools
+## Usage
+
+1. Clone or download this repository.
+2. Update the configuration section with your specific directories and email settings.
+3. Run the script using:
+
+   ```bash
+   python backup_script.py
+   ```
 
 ---
 
-### License:
-This project is licensed under the MIT License. 
+## Example Configuration
+
+```python
+source_dir = "/home/kali/Desktop/important_files"
+backup_dir = "/home/kali/Desktop/backups"
+retention_days = 7
+email_notifications = True
+
+email_recipient = "example_recipient@gmail.com"
+email_sender = "example_sender@gmail.com"
+smtp_server = "smtp.gmail.com"
+smtp_port = 587
+smtp_user = "your_email@gmail.com"
+smtp_pass = "your_email_password"
+```
 
 ---
 
-### Contact:
-For support or inquiries, reach out to the contributors via GitHub or email.
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+### Author
+
+Developed by Mohamed Ahsan Wakir & Abdullah Maqbool.
